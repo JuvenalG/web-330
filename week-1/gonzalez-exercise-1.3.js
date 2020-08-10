@@ -16,7 +16,7 @@ this.manufacturer = manufacturer;
 this.model = model;
 this.color = color;
 this.price = price;
-//Setter methods that return the properties
+//Getter methods that return the properties
 this.getPrice = function()
 {
     return price;
