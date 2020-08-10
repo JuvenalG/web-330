@@ -4,7 +4,8 @@
 ; Author: Professor Krasso
 ; Date:   August 10 2020
 ; Modified By: Juvenal Gonzalez
-; Description: Create a JavaScript program with conditional statements that contain two errors.
+; Description: Create a JavaScript program demonstrating the the usage of a an object property
+; that is an method of the object that returns all the properties.
 ;===========================================
 */
 
