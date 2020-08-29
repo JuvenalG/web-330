@@ -1,6 +1,6 @@
 #suit {
 	 
-     margin-left: auto;
+     margin-left: 40%;
      margin-right: auto;
      width: 10%;
 }
@@ -22,27 +22,31 @@ body {
 }
 
 #cert {
-	
+	position: fixed;
+	float: left;
 	max-width: 15%;
 	margin-bottom: 30%;
 }
 
 #outDiv {
-	position: relative;
+	display: block;
+	position:relative;
 }
+
+#
 
 #imgDiv {
 	display: block;
-	margin-left: 30%;
+	margin: auto;
 }
 
 .column {
 	max-width: 15%;
-	margin-bottom: 30%;	
+	margin-bottom: 100%;	
 }
 
 #bio {
-	display: block;
+	display: none;
 	margin: auto;
 	max-width: 15%;
 }
@@ -50,5 +54,40 @@ body {
 #bodyDiv {
 	display: block;
 	max-width:  width: 900px; 
-	margin: 0;
+	
+}
+
+
+.imgLink {
+	display: none;
+}
+
+.carousel {
+	display: block;
+	float: left;
+	max-width: 70%;
+}
+
+
+#carousel2 {
+	display: none;
+}
+
+#carousel {
+	display: none;
+}
+
+.btn-group-vertical {
+	display: none;
+}
+
+.button-group-vertical {
+	float: right;
+	margin-left: 5%;
+}
+
+
+.git {
+	float: right;
+	position: fixed;
 }

@@ -42,7 +42,6 @@ body {
 }
 
 #bio {
-	display: block;
 	margin: auto;
 	max-width: 15%;
 }
@@ -51,4 +50,8 @@ body {
 	display: block;
 	max-width:  width: 900px; 
 	margin: 0;
+}
+
+.imgLink {
+	
 }

@@ -9,9 +9,19 @@
 	
    <script>
 function myFunction() {
-  document.getElementsByClassName("center")[0].style.width="30%";
-  document.getElementsByTagName("body")[0].style.backgroundImage = "url(images/background_1.gif)";
-  document.getElementById("mainHeader").style.color="black";
+  
+	document.getElementsByClassName("center")[0].style.width="30%";
+  
+	document.getElementsByTagName("body")[0].style.backgroundImage = "url(images/background_1.gif)";
+  
+	document.getElementById("mainHeader").style.color="black";
+  
+	var links = document.getElementsByClassName("imgLink");
+	for (var i = 0; i < links.length; i++) { 
+                 links[i].style.display='initial';
+				console.log("here");
+      }
+	links[0].style.display="block";
 }
 	   
 
@@ -20,7 +30,7 @@ function myFunction() {
 </head>
 <body>
 	<div id="bodyDiv">
-	<img id="bio" class="align-self-auto" src="images/bio.png" alt="Biography Icon" >	
+	<img id="bio" class="align-self-auto imgLink" src="images/bio.png" alt="Biography Icon" >	
 	
 
 	<h3 id="mainHeader"  class="align-self-auto" onclick="myFunction()" >Certified Developer</h3>
@@ -32,19 +42,49 @@ function myFunction() {
 	<div id="imgDiv" class="align-self-center">	 
 	
      
-	<img id="cert"  src="images/certificate.png" alt="Certificate Wreath" >	 
+	<img id="cert" class="imgLink"  src="images/certificate.png" alt="Certificate Wreath" >	 
 		 
 		 
 		 
 	 <img id="suit"  src="images/suit.png" class="center" alt="man in suit"	onclick="myFunction()" >
 		 
-	 <img  src="images/github.png" class="column" alt="Github Logo">
+	 <img  src="images/github.png" class="column imgLink" alt="Github Logo">
 	
 	</div>
 		
 	 </div>
-															  
+		
+	 </div>
+	
+	
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="image/img.png" alt="First slide">
     </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="image/img.png" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="image/img.png" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>	
+	
+	
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
