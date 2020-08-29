@@ -1,0 +1,54 @@
+#suit {
+	 
+     margin-left: auto;
+     margin-right: auto;
+     width: 10%;
+}
+
+#mainHeader {
+	display: block;
+	margin-left: 47%;
+	max-width: 5%;
+	color: white;
+}
+
+body {
+  background-image: url('images/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  margin: auto;
+  max-width: 1080px;
+}
+
+#cert {
+	
+	max-width: 15%;
+	margin-bottom: 30%;
+}
+
+#outDiv {
+	position: relative;
+}
+
+#imgDiv {
+	display: block;
+	margin-left: 30%;
+}
+
+.column {
+	max-width: 15%;
+	margin-bottom: 30%;	
+}
+
+#bio {
+	display: block;
+	margin: auto;
+	max-width: 15%;
+}
+
+#bodyDiv {
+	display: block;
+	max-width:  width: 900px; 
+	margin: 0;
+}
