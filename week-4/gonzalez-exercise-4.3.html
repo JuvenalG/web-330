@@ -1,0 +1,59 @@
+
+<!--/*
+============================================
+; Title:  Exercise 4.3
+; Author: Professor Krasso
+; Date:   August 31 2020
+; Modified By: Juvenal Gonzalez
+; Description: Use a http delete request and display output in the console
+;===========================================
+*/-->
+
+
+<!DOCTYPE lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4.3</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+    
+</head>
+
+<body>
+
+    <h4>HTTP DELETE Request</h4>
+<!--Button used to initalise onclick event-->
+    <button id="delete1">Delete Securty User</button>
+
+<script>
+    //starts function
+    $(function(){
+        //listens for click event
+        $("#delete1").click(function() {
+         //sets the settings for the named object on the left
+        $.ajax({
+            url: "http://httpbin.org/delete",
+            dataType: "JSON",
+            type:"DELETE",
+            data: {username: "admin", password: "secret" , email: "as@me.com"},
+            //upon a successful request, the output of the data object and status will be outputted
+            success: function(data, status) {
+                console.log("Username: " + data.form.username + "\nPassword: " + data.form.password + "\nStatus: " + status);
+                }
+            
+
+
+        })
+
+    }); 
+
+});
+
+</script>
+
+
+
+</body>
+</html>
+
