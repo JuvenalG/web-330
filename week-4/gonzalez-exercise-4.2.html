@@ -1,0 +1,49 @@
+
+<!--/*
+============================================
+; Title:  Exercise 4.2
+; Author: Professor Krasso
+; Date:   August 31 2020
+; Modified By: Juvenal Gonzalez
+; Description: Use a http get request to display output
+;===========================================
+*/-->
+
+
+<!DOCTYPE lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 4.2</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+    
+</head>
+
+<body>
+
+    <h4>HTTP GET Request</h4>
+<!--Button used to initalise onclick event-->
+    <button id="get1">Get Random Breed</button>
+
+<script>
+    //function that listens to onclick targeted at get1 ID
+    $(function(){
+        $("#get1").click(function(){
+            //get request that targets the url with a callback command 
+            $.get("https://dog.ceo/api/breeds/image/random", function(data, status) {
+                console.log("Data: " + JSON.stringify(data) + "\nStatus: " + status );
+            })
+                
+
+        });
+
+    });
+
+</script>
+
+
+
+</body>
+</html>
+
