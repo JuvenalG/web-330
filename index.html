@@ -1,168 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <title>Portfolio</title>
+  <!--Boostrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  
+  <!--Stylesheet-->
   <link href="styles.css" rel="stylesheet" type="text/css">
-	
-   <script>
-function myFunction() {
-  
-	document.getElementsByClassName("center")[0].style.width="30%";
-  
-	document.getElementsByTagName("body")[0].style.backgroundImage = "url(images/background_1.gif)";
-  
-	document.getElementById("mainHeader").style.color="black";
-  
-	var links = document.getElementsByClassName("imgLink");
-	for (var i = 0; i < links.length; i++) { 
-                 links[i].style.display='initial';
-				console.log("here");
-      }
-	links[0].style.display="block";
-}
-	  
-function git(){
-	document.getElementsByClassName("carol")[0].style.display="block";
-	document.getElementsByClassName("bio")[0].style.display="none";
-	document.getElementsByClassName("cert")[0].style.display="none";
-	document.getElementsByClassName("suit")[0].style.display="none";
-	document.getElementsByClassName("btn-group-vertical")[0].style.display="inline";
-	document.getElementsByClassName("btn-group-vertical")[0].style.position="absolute"
-	document.getElementsByClassName("mainHeader")[0].style.display="none";
-	document.getElementsByClassName("git")[0].style.margin="10px";
-	document.getElementsByClassName("git")[0].style.display="relative";
-}
-
-
-function redirect(){
-	window.location.href = 'https://github.com/JuvenalG/web-231';
-}
-	   
-function redirectb(){
-	window.location.href = 'https://github.com/JuvenalG/web-231';
-}
-	   
-function switchb(){
-	document.getElementsByClassName("carol")[0].style.display="none";
-	document.getElementsByClassName("carol2")[0].style.display="block";			
-}
-	
-function switcha(){
-	document.getElementsByClassName("carol")[0].style.display="block";
-	document.getElementsByClassName("carol2")[0].style.display="none";			
-}
-	   
-</script>
+  <!--Javascript-->
+  <script src="scripts.js"></script>
 
 </head>
-<body>
-	<div id="bodyDiv">
-	<img id="bio" class="align-self-auto imgLink bio" src="images/bio.png" alt="Biography Icon" >	
 	
+<body class="sansserif">
+	
+<div id="bodyDiv">
+	<!--Images to be revealed after initial click-->	
+	<img id="bio" class="align-self-auto imgLink bio crosshair" src="images/bio.png" alt="Biography Icon" onClick="bioFunction()" >	
+	
+<div class="text-center">
+ 	<img src="images/profilePic.jpg" class="rounded profilePic" alt="...">
+</div>
 
 	<h3 id="mainHeader"  class="align-self-auto mainHeader" onclick="myFunction()" >Certified Developer</h3>
-	
-	
+	<!--Hidden Paragraph to be revealed upon bio click-->
+	<P class="paragraph">After having my first daughter, I knew the pizzeria was not going to allow me to provide what I wanted for my new found purpose in life. Two years of hard labor in construction, ending in a layoff, I found myself with nothing to show for it. I knew at this point I had to return to higher education. I wanted to earn something that could never be taken away from me. I always was computer literate but did not find my love for analytical thinking until I took a Programming Logic class. Never did I know that the languages that control computers could be so interesting. Here I am doing what I love and will keep growing as a developer.</P>
 	 
-     <div id="outDiv">
+<div id="outDiv">
 		
 	<div id="imgDiv" class="align-self-center">	 
 	
      
-	<img id="cert" class="imgLink cert"  src="images/certificate.png" alt="Certificate Wreath" >	 
+		<img id="cert" class="imgLink cert crosshair"  src="images/certificate.png" alt="Certificate Wreath" onClick="certClick()" >	 
+		 <!--Main image with first interaction and crosshair to indicate clickable event-->
+		<img id="suit"  src="images/suit.png" class="center suit crosshair" alt="man in suit"	onclick="myFunction()" >
 		 
-		 
-		 
-	 <img id="suit"  src="images/suit.png" class="center suit" alt="man in suit"	onclick="myFunction()" >
-		 
-	 <img  src="images/github.png" class="column imgLink git" alt="Github Logo" onclick="git()">
+	 	<img id="gitLogo"  src="images/github.png" class="column imgLink git gitLogo crosshair" alt="Github Logo" onclick="git()">
 	
 	</div>
 		
-	 </div>
+</div>
 		
-	 </div>
+</div>
+	<!--Hidden Go Back Logo to be revealed when entering nested screen-->
+	<img  src="images/back.png" class="back2 crosshair" alt="Return Logo" onClick="myFunction2()">
+		
+<!--Cards to be swapped to interact with button selections-->	
+<div class="cardButton">
 	
-	
-	 <div>
-	
-	<div id="carousel" data-interval="false" class="carousel slide carol float-left" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel" data-slide-to="1"></li>
-    <li data-target="#carousel" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active frame   ">
-      <iframe src="https://juvenalg.github.io/Biosite/" width="600px" height="500px"  title="Biosite Link" >
-</iframe>
-    </div>
-    <div class="carousel-item">
-      <iframe src="images/biositePrototype.pdf" width="600px" height="500px"  title="Biosite Prototype" >
-</iframe>
-    </div>
-    <div class="carousel-item">
-      <iframe src="https://github.com/JuvenalG/Biosite/find/master" width="600px" height="500px"  title="Biosite Repository" >
-</iframe>
-    </div>
+	<div class="card bioCard" style="width: 18rem;">
+  <img  src="images/bioGallery.JPG" class="column" alt="Biosite Image" >
+  <div class="card-body">
+    <h5 class="card-title">Biosite</h5>
+    <p class="card-text">Page that showcases simple biographical webpage</p>
+    <a href="https://juvenalg.github.io/Biosite/" target="_blank" class="btn btn-primary">Link to BioSite&nbsp;</a>
   </div>
-  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon float-left" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  
-</div>
-	
-	<div id="carousel2" data-interval="false" class="carousel slide carol2 float-left" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel" data-slide-to="1"></li>
-    <li data-target="#carousel" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active frame   ">
-      <iframe src="images/portfolioProtoype.pdf" width="600px" height="500px"  title="Biosite Link" >
-</iframe>
-    </div>
-    <div class="carousel-item">
-      <iframe src="https://github.com/JuvenalG/web-330" width="600px" height="500px"  title="Web 330 Repository" >
-</iframe>
-    </div>
-    <div class="carousel-item">
-      <iframe src="https://github.com/JuvenalG/Biosite/find/master" width="600px" height="500px"  title="Biosite Repository" >
-</iframe>
-    </div>
   </div>
-  <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon float-left" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  
+	
+<div class="card bioProCard" style="width: 18rem;">
+  <img  src="images/bioPrototypeGallery.JPG" class="column" alt="">
+  <div class="card-body">
+    <h5 class="card-title">Biosite Prototype</h5>
+    <p class="card-text">Visual representation of biosite prototype</p>
+    <a href="images/biositePrototype.pdf" target="_blank" class="btn btn-primary">Link to Document&nbsp;</a>
+  </div>
 </div>
 	
 	
-	<div class="btn-group-vertical gitSamp float-md-right">
-  <button type="button" class="btn btn-secondary" onclick="switcha()">Biosite</button>
-  <button type="button" class="btn btn-secondary">Biosite Prototype</button>
-		<button type="button" class="btn btn-secondary" onclick="redirect()">WEB 231 Interprise Javascript I</button>
-  <button type="button" class="btn btn-secondary"  onclick="switchb()">Portfolio Prototype</button>
-  <button type="button" class="btn btn-secondary">WEB 330 Enterprise Javascript II</button>
-		<button type="button" class="btn btn-secondary" onclick="redirectb()">github.com/JuvenalG</button>	  
+<div class="card web231Card" style="width: 18rem;">
+  <img  src="images/web231RepositoryGallery.JPG" class="column" alt="">
+  <div class="card-body">
+    <h5 class="card-title">Web 231 Repository&nbsp;</h5>
+    <p class="card-text">Code Samples using Javascript&nbsp; &nbsp;&nbsp;</p>
+    <a href="https://github.com/JuvenalG/web-231" target="_blank" class="btn btn-primary">Link to Repository&nbsp;</a>
+  </div>
 </div>
+	
+<div class="card portfolioCard" style="width: 18rem;">
+  <img  src="images/portfolioPrototypeGallery.JPG" class="column" alt="">
+  <div class="card-body">
+    <h5 class="card-title">Personal Porfolio Prototype</h5>
+    <p class="card-text">Visual prototype envisioned before creation</p>
+    <a href="images/portfolioProtoype.pdf" target="_blank" class="btn btn-primary">Link to Prototype Document&nbsp;</a>
+  </div>
+</div>
+	
+<div class="card web330Card" style="width: 18rem;">
+  <img  src="images/portfolioRepositoryGallery.JPG" class="column " alt="">
+  <div class="card-body">
+    <h5 class="card-title">Web 330 Repository</h5>
+    <p class="card-text">Code Samples of Javascript Enterpise II&nbsp; &nbsp; &nbsp;&nbsp;</p>
+    <a href="https://github.com/JuvenalG/web-330" target="_blank" class="btn btn-primary">Link to Repository</a>
+  </div>
+</div>
+		 
+<div class="card githubCard" style="width: 18rem;">
+  <img  src="images/githubProfile.JPG" class="column " alt="">
+  <div class="card-body">
+    <h5 class="card-title">Github Profile</h5>
+    <p class="card-text">Repository Profile on Github&nbsp; &nbsp; &nbsp;&nbsp;</p>
+    <a href="https://github.com/JuvenalG" target="_blank" class="btn btn-primary">Link to Profile</a>
+  </div>
 </div>
 	
 	
+	
+	<!--button selections-->
+ <div class="btn-group-vertical gitSamp">
+  <button type="button" class="btn btn-secondary" onclick="switch1()">Biosite</button>
+  <button type="button" class="btn btn-secondary" onclick="switch2()">Biosite Prototype</button>
+		<button type="button" class="btn btn-secondary" onclick="switch3()">WEB 231 Interprise Javascript I</button>
+  <button type="button" class="btn btn-secondary"  onclick="switch4()">Portfolio Prototype</button>
+  <button type="button" class="btn btn-secondary" onclick="switch5()">WEB 330 Enterprise Javascript II</button>
+		<button type="button" class="btn btn-secondary" onclick="switch6()">github.com/JuvenalG</button>	  
+  </div>
+		  <img id="gitLogo2"  src="images/github.png" class="gitLogo2" alt="Github Logo">
+		 
+
+</div>	
+<img  src="images/back.png" class="back crosshair" alt="Return Logo" onClick="myFunction2()">
+<!--Second card swap with button selection-->
+<div class="certPage">
+	
+<div class="card certCard certA" style="width: 18rem;">
+  <img  src="images/webTech.JPG" class="column" alt="Requirments Page" >
+  <div class="card-body">
+    <h5 class="card-title">Web Developer Tech 2017</h5>
+    <p class="card-text">Requirements for Certification</p>
+    <a href="https://catalog.deltacollege.edu/preview_program.php?catoid=6&poid=1219&hl=%22web+developer%22&returnto=search" target="_blank" class="btn btn-primary">Link to Requirement page&nbsp;</a>
+  </div>
+  </div>
+	
+<div class="card certCard certB" style="width: 18rem;">
+  <img  src="images/webTech.JPG" class="column" alt="Requirments Page" >
+  <div class="card-body">
+    <h5 class="card-title">Web Developer 2020</h5>
+    <p class="card-text">Requirements for Certification</p>
+    <a href="https://catalog.deltacollege.edu/preview_program.php?catoid=6&poid=1218&returnto=388" target="_blank" class="btn btn-primary">Link to Requirement page&nbsp;</a>
+  </div>
+  </div>
+	
+<div class="card certCard certC" style="width: 18rem;">
+  <img  src="images/transcriptPreview.JPG" class="column" alt="Requirments Page" >
+  <div class="card-body">
+    <h5 class="card-title">Associate in Computer Science 2019</h5>
+    <p class="card-text">Honors with Emphasis on Programming</p>
+    <a href="images/transcript.pdf" target="_blank" class="btn btn-primary">Link to Transcript Document&nbsp;</a>
+  </div>
+  </div>
+<!--last button interactions-->
+<div class="btn-group-vertical buttonCert">
+  <button type="button" class="btn btn-secondary" onclick="switch7()">Web Dev Tech</button>
+  <button type="button" class="btn btn-secondary" onclick="switch8()">Web Developer</button>
+  <button type="button" class="btn btn-secondary" onclick="switch9()">Associate in Computer Science</button>
+ 
+ 	  
+</div>
+	
+
+	
+</div>
+
+<img  src="images/back.png" class="back3 crosshair" alt="Return Logo" onClick="myFunction2()">
+	
+	<!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
