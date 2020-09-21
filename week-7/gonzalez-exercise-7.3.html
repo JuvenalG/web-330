@@ -26,6 +26,7 @@
                     <th>Price</th>
                 </tr>
             </thead>
+            <!--for each data binding that iterates the array in the view model and outputs each specified properties values-->
         <tbody data-bind="foreach: bookItems">
             <tr>
                 <td data-bind="text: title" style="color: teal;"></td>
@@ -39,7 +40,7 @@
 
 
 <script>
-
+//view model with an array that is bound
 function BookViewModel() {
  this.bookItems = ko.observableArray([
  {title: "Programming Logic", price: 80},

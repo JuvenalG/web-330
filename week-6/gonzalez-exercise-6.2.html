@@ -36,7 +36,7 @@
     <h2>Person View Model</h2>
 
     <div class="form-group">
-         <label for="txtFirstName">First Name:</label>   
+         <label for="txtFirstName">First Name:</label>   <!--data bind linking the property to the value specified-->
          <input type="text" class="form-control alert-warning" data-bind="value: firstName" id="txtFirstName">
     </div>
 
@@ -54,14 +54,14 @@
 
 
 <script>
-
+//view model bound using ko
 function PersonViewModel() {
     this.firstName = ko.observable("Harold");
     this.lastName = ko.observable("Lezowsky");
     this.email = ko.observable("hLezowsky@gmail.com");
 
 }
-    
+    //this applies the bindings by passing the view model into the .applybindings object
 ko.applyBindings(new PersonViewModel());
 
 </script>

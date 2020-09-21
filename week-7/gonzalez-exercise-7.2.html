@@ -31,8 +31,10 @@
     </h2>
  <div class="form-group">
     <label for="txtfirstName">First Name: </label>
+                                <!--binds the property of the view model object-->
     <input type="text" data-bind="value: firstName" class="form-control" id="txtFirstName"/>
  </div>
+                <!--if statement causes element to only appear when data is entered in the specified property value-->
  <div data-bind="if: fName">
     <div class="form-group">
         <label for="txtLastName">Last Name: </label>
@@ -46,12 +48,15 @@
          <br/>
 </div>
 <script>
+    //view model containing bound properties using the ko.observable object
  function PersonViewModel() {
     this.firstName = ko.observable("");
     this.lastName = ko.observable("");
+    //computed binding that ensures the name value is constantly updated
     this.fName = ko.pureComputed(function () {
          return this.firstName();
         }, this);
+        //computed binding that makes sure this output is changed when either value is updated
     this.displayName = ko.pureComputed(function () {
         return this.firstName() + " " + this.lastName();
         }, this);
