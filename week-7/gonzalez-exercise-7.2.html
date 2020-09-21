@@ -1,4 +1,6 @@
 
+ 
+ 
  <!--/*
 ============================================
 ; Title:  Exercise 7.2
@@ -8,42 +10,47 @@
 ; Description: Use an if binding that outputs a bound fullName upon entry of data
 ;===========================================
 */-->
+<!DOCTYPE html>
+ <head>
+    <!-- Knockout Library -->
+    <script src="../knockout-3.5.1.js"></script>
+</head>
  
- <!-- JavaScript Libraries -->
- <script src="../knockout-3.5.1.js"></script>
+    <body>
 
-Exercise 7.2
 <div role="main" class="container">
- <br/><br/>
- <h2>Example 2</h2>
+        <br/><br/>
+    <h2>Exercise 2
+    </h2>
  <div class="form-group">
- <label for="txtfirstName">First Name: </label>
- <input type="text" data-bind="value: firstName" class="form-control" id="txtFirstName"/>
+    <label for="txtfirstName">First Name: </label>
+    <input type="text" data-bind="value: firstName" class="form-control" id="txtFirstName"/>
  </div>
  <div data-bind="if: fName">
- <div class="form-group">
- <label for="txtLastName">Last Name: </label>
- <input type="text" data-bind="value: lastName" class="form-control"
-id="txtlastName"/>
+    <div class="form-group">
+        <label for="txtLastName">Last Name: </label>
+        <input type="text" data-bind="value: lastName" class="form-control"id="txtlastName"/>
+    </div>
  </div>
- </div>
- <br/>
- <div data-bind="if: lastName">
- <h2><span id="nameOutput" class="alert-success" data-bind="text:
-displayName"></span></h2>
- </div>
- <br/>
+        <br/>
+    <div data-bind="if: lastName">
+        <h2><span id="nameOutput" class="alert-success" data-bind="text:displayName"></span></h2>
+    </div>
+         <br/>
 </div>
 <script>
  function PersonViewModel() {
- this.firstName = ko.observable("");
- this.lastName = ko.observable("");
- this.fName = ko.pureComputed(function () {
- return this.firstName();
- }, this);
- this.displayName = ko.pureComputed(function () {
- return this.firstName() + " " + this.lastName();
- }, this);
+    this.firstName = ko.observable("");
+    this.lastName = ko.observable("");
+    this.fName = ko.pureComputed(function () {
+         return this.firstName();
+        }, this);
+    this.displayName = ko.pureComputed(function () {
+        return this.firstName() + " " + this.lastName();
+        }, this);
  }
  ko.applyBindings(new PersonViewModel());
 </script>
+
+ </body>
+</html>
