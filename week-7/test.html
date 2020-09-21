@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Custom Binding</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+    <!-- Stylesheet - Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- JavaScript Libraries -->
+    <script src="../knockout-3.5.1.js"></script>
+</head>
+<body>
+                                                        <!--specifies the bound property value-->
+    <input type="text" class="form-control alert-warning" data-bind="values: firstName"  id="txtFirstName"> 
+    <h2></h2>
+  
+
+<script>
+    //viewmode stores ko bound properties
+function PersonViewModel() {
+    this.firstName = ko.observable("Harold");
+    this.lastName = ko.observable("Lezowsky");
+    this.email = ko.observable("hLezowsky@gmail.com");
+
+}
+
+ko.bindingHandlers.values = {
+    //called upon intializtion, and whenever values are altered
+    update: function (element, valueAccessor, allBindings, viewModel, bindingContext){
+        //accesses the value in the data binding
+        var value = valueAccessor();
+        //unwraps the object into a readable value
+        var valueUnwrapped = ko.unwrap(value);
+        //unwraps property of viewModel that is also contained in the same viewModel of the value being handled
+        var lsName = ko.unwrap(viewModel.lastName);
+        //outputs the firstName and lastName to make a fullName
+        $(element).val(valueUnwrapped + " " + lsName);
+    }
+};
+//binds all properties in the viewModel
+ko.applyBindings(new PersonViewModel());
+
+</script>
+    
+</body>
+</html>
