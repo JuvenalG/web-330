@@ -1,0 +1,73 @@
+ <!--/*
+============================================
+; Title:  Exercise 7.4
+; Author: Professor Krasso
+; Date:   September 21 2020
+; Modified By: Juvenal Gonzalez
+; Description: Use a forEach data binding that outputs each property value and change the link value into an href attribute
+;===========================================
+*/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Assignment 7.4</title>
+
+    <!-- Stylesheet - Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- JavaScript Libraries -->
+    <script src="../knockout-3.5.1.js"></script>
+</head>
+<body>
+
+    <div role="main" class="container">
+        <br/><br/>
+        <h2>The "foreach" binding</h2>
+        <table class="table table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <!--for each data binding that iterates the array in the view model and outputs each specified properties values-->
+        <tbody data-bind="foreach: tutorialItems">
+            <tr>
+                <td data-bind="text: title" style="color: teal;"></td>
+                <td data-bind="text: description" style="color: green;"></td>
+                           <!--attr data bind changes the type of value of the property-->
+                <td ><a data-bind="attr: {href: link}" target="blank">Go to Tutorial</a></td>
+             </tr>
+        </tbody>
+        </table>
+        <br/>
+       </div>
+
+
+
+<script>
+//view model with title, description, and link as properties in an array
+function TutorialViewModel() {
+ this.tutorialItems = ko.observableArray([
+ {title: "Custom bindings", description: "Create a custom binding using knockout js", link: 'https://knockoutjs.com/documentation/custom-bindings.html'},
+ {title: "Adobe Premiere Video Editing", description: "Multiple tutorials to improve video editing skills" , link: "https://helpx.adobe.com/premiere-pro/tutorials.html"},
+ {title: "Leave Her Fast", description: "How To Lose A Girl In Less Than 10 Days" , link: "https://identity-mag.com/lose-girl-less-10-days/"},
+ {title: "Build a Budget SuperComputer", description: "How to build a supercomputer (without breaking the bank)" , link: "https://www.etb-tech.com/info/how-to-build-a-supercomputer/"},
+ {title: "Becom a Professional Streamer", description: "What you need to live stream using OBS" , link: "https://www.theverge.com/2020/4/15/21213548/live-stream-obs-how-to-streamlabsobs-windows-mac-hardware"}
+ ]);
+}
+
+ko.applyBindings(TutorialViewModel);
+
+</script>
+
+
+
+</body>
+</html>
