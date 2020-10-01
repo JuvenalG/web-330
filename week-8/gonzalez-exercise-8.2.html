@@ -51,7 +51,7 @@
           <a href="#" data-bind="click: add" class="btn btnprimary">Add</a>
         </div>
      </div>
-     <div class="form-group"> <!--For loop displays all values of employeeList array-->
+     <div class="form-group"> <!--For loop displays all values of employeeList array READ--> 
       <label for="employeeList">Employee Name List: </label>
       <select size="10" class="form-control" data-bind="options: employeeList" id="employeeList"></select>
      </div>
@@ -70,7 +70,7 @@
      this.employeeList = ko.observableArray(["Bob Lezowsky", "Harold Kumar", "Jeffrey Dahmer"]);
      this.error = ko.observable("");
         //add function pushes nameeToAdd value upon employeeList array
-     this.add = function () {
+     this.add = function () { //CREATE
      if ((this.nameToAdd() !== "") && (this.employeeList.indexOf(this.nameToAdd()) < 0)) {
      this.error("");
      this.employeeList.push(this.nameToAdd());

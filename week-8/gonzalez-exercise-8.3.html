@@ -57,11 +57,11 @@
                                 </tr>
                             </thead>   <!--For each displays each objects property-->
                             <tbody data-bind="foreach: Employees">
-                                <tr>
+                                <tr>      <!--Bound to selected object in array upon click of edit -->
                                     <td data-bind="text: Id"></td>
                                     <td data-bind="text: Name"></td>
                                     <td>
-                                        <span>           <!--Calls parent function to edit or remove-->
+                                        <span>           <!--Calls function to edit or remove-->
                                             <a href="#" class="btn btn-success" data-bind="click:$root.edit">
                                             <i class="fa fa-pencil fa-lg"> </i> EDIT
                                             </a>
@@ -78,14 +78,14 @@
                     </div>
                 </div>
             </div>
-        </div>           <!--If statement only displays when employee is present-->
+        </div>           <!--If statement only displays when edit function passes a value onto Employee-->
         <div class="col-sm-4" data-bind="if: Employee">
             <div class="card card-inverse" style="background-color: #333; border-color: #333; color: white;">
                 <div class="card-block p-3">
                     <h3 class="card-title">Employee List Item</h3>
                     <div class="card-text">
                         <div class="form-group">
-                            <label for="txtName">Name: </label> <!--Data binds Employee with function that sets ID and Name-->
+                            <label for="txtName">Name: </label> <!--Data binds Employee with function that sets Name-->
                             <input type="text" id="txtName" data-bind="value: Employee().Name" class="form-control" />
                         </div>
                         <div class="form-group float-right"> <!--calls parent function to cancel or update-->
@@ -101,7 +101,7 @@
 </div>
 
 <script> 
-    //bound function
+    //function definition
     function Employee(id, name) {
        this.Id = id;
        this.Name = name;
@@ -128,15 +128,15 @@
        self.Employee = ko.observable();
        self.Employees = ko.observableArray(employeeList);
        //edit remove cancel and update functions
-       self.edit = function (Employee) {
+       self.edit = function (Employee) { //passes value onto Employee so that label to edit the Employee value is revealed
        self.Employee(Employee);
-       };
+       }; //Removes current selected object from Employees array
        self.remove = function(Employee) {
            self.Employees.remove(Employee);
-       };
+       }; //Cancels selection and places null in Employee so that if loop exits
        self.cancel = function() {
            self.Employee(null);
-       };
+       }; //updates employee by swapping new value and removed old value
        self.update = function() {
            var l_employee = self.Employee();
            self.Employees.remove(self.Employee());
