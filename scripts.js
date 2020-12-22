@@ -92,7 +92,7 @@ function certClick(){
 function switch1(){
 	
 	var i;
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 13; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("bioCard")[0].style.display="block";
@@ -101,7 +101,7 @@ function switch1(){
 	
 function switch2(){
 	var i;
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 13; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("bioProCard")[0].style.display="block";			
@@ -109,7 +109,7 @@ function switch2(){
 	   
 function switch3(){
 	var i;
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 13; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web231Card")[0].style.display="block";			
@@ -117,7 +117,7 @@ function switch3(){
 	
 function switch4(){
 	var i;
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 13; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("portfolioCard")[0].style.display="block";			
@@ -125,7 +125,7 @@ function switch4(){
 
 function switch5(){
 	var i;
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 13; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web330Card")[0].style.display="block";			
@@ -133,7 +133,7 @@ function switch5(){
 
 function switch6(){
 	var i;
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 13; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("githubCard")[0].style.display="block";			
@@ -165,7 +165,7 @@ function switch9(){
 	
 function switch10(){
 	var i;
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 13; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web335Diagrams")[0].style.display="block";			
@@ -173,7 +173,7 @@ function switch10(){
 
 function switch11(){
 	var i;
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 13; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web335Card")[0].style.display="block";			
@@ -181,7 +181,7 @@ function switch11(){
 
 function switch12(){
 	var i;
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 13; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web420Presentations")[0].style.display="block";			
@@ -189,8 +189,33 @@ function switch12(){
 
 function switch13(){
 	var i;
-	for(i = 0; i < 10; i++){
+	for(i = 0; i < 13; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web420Card")[0].style.display="block";			
 }
+
+function switch14(){
+	var i;
+	for(i = 0; i < 13; i++){
+		document.getElementsByClassName("card")[i].style.display="none";
+	}
+	document.getElementsByClassName("web425")[0].style.display="block";			
+}
+
+function switch15(){
+	var i;
+	for(i = 0; i < 13; i++){
+		document.getElementsByClassName("card")[i].style.display="none";
+	}
+	document.getElementsByClassName("devPresentations")[0].style.display="block";			
+}
+
+function switch16(){
+	var i;
+	for(i = 0; i < 13; i++){
+		document.getElementsByClassName("card")[i].style.display="none";
+	}
+	document.getElementsByClassName("dev430")[0].style.display="block";			
+}
+
