@@ -62,6 +62,10 @@ function git(){
 	document.getElementsByClassName("gitLogo2")[0].style.display="block";
 	document.getElementsByClassName("back")[0].style.display="inline";
 	document.getElementsByClassName("cardButton")[0].style.display="block";
+	for(i = 1; i < 13; i++){
+		document.getElementsByClassName("card")[i].style.display="none";
+	}
+	
 	
 }
 //bio link that shows small about me
