@@ -229,7 +229,7 @@ function switch18(){
 	for(i = 0; i < 15; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
-	document.getElementsByClassName("web425c")[0].style.display="block";			
+	document.getElementsByClassName("web425Lib")[0].style.display="block";			
 }
 
 
