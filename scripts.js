@@ -223,13 +223,6 @@ function switch16(){
 	document.getElementsByClassName("dev430")[0].style.display="block";			
 }
 
-function switch17(){
-	var i;
-	for(i = 0; i < 15; i++){
-		document.getElementsByClassName("card")[i].style.display="none";
-	}
-	document.getElementsByClassName("web425b")[0].style.display="block";			
-}
 
 function switch18(){
 	var i;
@@ -238,4 +231,15 @@ function switch18(){
 	}
 	document.getElementsByClassName("web425c")[0].style.display="block";			
 }
+
+
+
+function switch17(){
+	var i;
+	for(i = 0; i < 15; i++){
+		document.getElementsByClassName("card")[i].style.display="none";
+	}
+	document.getElementsByClassName("web425b")[0].style.display="block";			
+}
+
 
