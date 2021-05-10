@@ -62,7 +62,7 @@ function git(){
 	document.getElementsByClassName("gitLogo2")[0].style.display="block";
 	document.getElementsByClassName("back")[0].style.display="inline";
 	document.getElementsByClassName("cardButton")[0].style.display="block";
-	for(i = 1; i < 15; i++){
+	for(i = 1; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	
@@ -96,7 +96,7 @@ function certClick(){
 function switch1(){
 	
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("bioCard")[0].style.display="block";
@@ -105,7 +105,7 @@ function switch1(){
 	
 function switch2(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("bioProCard")[0].style.display="block";			
@@ -113,7 +113,7 @@ function switch2(){
 	   
 function switch3(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web231Card")[0].style.display="block";			
@@ -121,7 +121,7 @@ function switch3(){
 	
 function switch4(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("portfolioCard")[0].style.display="block";			
@@ -129,7 +129,7 @@ function switch4(){
 
 function switch5(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web330Card")[0].style.display="block";			
@@ -137,7 +137,7 @@ function switch5(){
 
 function switch6(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("githubCard")[0].style.display="block";			
@@ -169,7 +169,7 @@ function switch9(){
 	
 function switch10(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web335Diagrams")[0].style.display="block";			
@@ -177,7 +177,7 @@ function switch10(){
 
 function switch11(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web335Card")[0].style.display="block";			
@@ -185,7 +185,7 @@ function switch11(){
 
 function switch12(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web420Presentations")[0].style.display="block";			
@@ -193,7 +193,7 @@ function switch12(){
 
 function switch13(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web420Card")[0].style.display="block";			
@@ -201,7 +201,7 @@ function switch13(){
 
 function switch14(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web425")[0].style.display="block";			
@@ -209,7 +209,7 @@ function switch14(){
 
 function switch15(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("devPresentations")[0].style.display="block";			
@@ -217,7 +217,7 @@ function switch15(){
 
 function switch16(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("dev430")[0].style.display="block";			
@@ -226,7 +226,7 @@ function switch16(){
 
 function switch18(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web425Lib")[0].style.display="block";			
@@ -236,10 +236,27 @@ function switch18(){
 
 function switch17(){
 	var i;
-	for(i = 0; i < 15; i++){
+	for(i = 0; i < 17; i++){
 		document.getElementsByClassName("card")[i].style.display="none";
 	}
 	document.getElementsByClassName("web425b")[0].style.display="block";			
+}
+
+
+function switch18(){
+	var i;
+	for(i = 0; i < 17; i++){
+		document.getElementsByClassName("card")[i].style.display="none";
+	}
+	document.getElementsByClassName("nodebucket")[0].style.display="block";			
+}
+
+function switch19(){
+	var i;
+	for(i = 0; i < 17; i++){
+		document.getElementsByClassName("card")[i].style.display="none";
+	}
+	document.getElementsByClassName("bcrs")[0].style.display="block";			
 }
 
 
